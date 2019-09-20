@@ -1,0 +1,76 @@
+package com.ihrm.company.vo;
+
+import lombok.Data;
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+import java.util.List;
+
+
+/**
+ * @author wuzebin
+ * @title: Department
+ * @projectName ihrm_parent
+ * @description: 部门表实体类
+ * @date 2019/7/2221:47
+ */
+@Data
+@Component
+public class DepartmentOrgin implements Serializable {
+
+    private static final long serialVersionUID = 594829320797141219L;
+
+    /**
+     * 主键id
+     */
+    private String id;
+
+    /**
+     * 公司id
+     */
+    private String companyId;
+
+    /**
+     * 父级部门ID
+     */
+    private String parentId;
+
+    /**
+     * 部门名称
+     */
+    private String name;
+
+    /**
+     * 部门编码
+     */
+    private String code;
+
+    /**
+     *  部门类别
+     */
+    private String category;
+
+    /**
+     * 负责人id
+     */
+    private String managerId;
+
+    /**
+     *  城市
+     */
+    private String city;
+
+    /**
+     *  部门负责人
+     */
+    private String manager;
+
+    /**
+     * 介绍
+     */
+    private String introduce;
+
+
+
+
+}

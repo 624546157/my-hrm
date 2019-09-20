@@ -87,6 +87,7 @@ public class DepartmentServiceImpl implements DepartmentService {
      * @param department
      */
     @Override
+    @Transactional
     public int update(Department department) {
         log.info("更新部门信息service>>>>>>>>service参数为：" + department.toString());
 
@@ -99,8 +100,9 @@ public class DepartmentServiceImpl implements DepartmentService {
      *
      * @param ids
      */
+    @Transactional
     public int deteleByIds(List<String> ids) {
-        log.info("更新部门信息service>>>>>>>>service参数为：" + ids.toString());
+        log.info("删除部门信息service>>>>>>>>service参数为：" + ids.toString());
 
         int num = 0;
         for (String id : ids) {

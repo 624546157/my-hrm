@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: D:\idea\JetBrains\IntelliJ IDEA 2018.3\code\ihrm_parent\ih
+ rm_company\src\main\java
+

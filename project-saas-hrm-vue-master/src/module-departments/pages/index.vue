@@ -145,7 +145,8 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-               deleteById({id:id}).then(res=> {
+          var obj={}
+               remove(id).then(res=> {
                 this.$message({
                   message: res.data.message,
                   type: res.data.success?'success':'error'

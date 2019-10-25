@@ -107,7 +107,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         int num = 0;
         for (String id : ids) {
             Department department = departmentDao.selectById(id);
-            department.setEnable_status("");
+            department.setEnable_status(EnableStatusEnum.NOT_ENABLE.getCode());
             departmentDao.updateById(department);
             num ++;
         }

@@ -12,9 +12,11 @@ import constant.EnableStatusEnum;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -93,17 +95,18 @@ public class DepartmentController extends BaseController {
      * 根据id删除
      */
     @ApiOperation("根据id删除")
-    @RequestMapping(value="/deteleByIds",method = RequestMethod.POST)
-    public Result deteleByIds(ArrayList<String> ids) {
-
-        Integer num = departmentService.deteleByIds(ids);
+    @RequestMapping(value="/deteleByIds",produces= MediaType.APPLICATION_JSON_VALUE+";charset=utf-8")
+    public Result deteleByIds(@RequestBody List<String> voList){
+        Integer num = departmentService.deteleByIds(voList);
 
         return Result.SUCCESS(num);
     }
 
-//    public static void main(String[] args) {
-//        String msg = EnumUtil.getByCode(EnableStatusEnum.ALREADY_ENABLE.getCode(), EnableStatusEnum.class);
-//        System.out.println(msg);
-//    }
+    public static void main(String[] args) {
+       ArrayList list = new ArrayList();
+       list.add(1);
+       list.add(2);
+        System.out.println(list);
+    }
 
 }

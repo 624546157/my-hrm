@@ -20,7 +20,7 @@ import java.sql.SQLException;
  * @description: TODO
  * @date 2019/9/217:57
  */
-//@Configuration
+@Configuration
 public class DruidConfiguration {
     private static final String DB_PREFIX = "spring.datasource";
 
